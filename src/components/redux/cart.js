@@ -16,19 +16,19 @@ const cartSlice = createSlice({
         count:1
     })
     },
-    dncrement : (state,action) => {
+    dncrement : (state, action) => {
        const productID =  action.payload
        state.cartList.forEach(item => {
         if(item?.id === productID){
-            item.count++
+            item.count--;
         }
        })
     },
-    increment : (state,action) => {
+    increment : (state, action) => {
         const productID =  action.payload
        state.cartList.forEach(item => {
         if(item?.id === productID){
-            item.count--    
+            item.count++;   
         }
        })
     },
