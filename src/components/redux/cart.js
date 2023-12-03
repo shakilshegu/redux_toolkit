@@ -10,8 +10,11 @@ const cartSlice = createSlice({
     name:"cart",
     initialState:INITIAL_STATE,
     reducers:{
-    addToCart : (state) => {
-      state.cartCount = 1
+    addToCart : (state,action) => {
+    state.cartList.push({
+        ...action.payload,
+        count:1
+    })
     },
     dncrement : (state) => {
         state.cartCount -=1
