@@ -18,7 +18,7 @@ const cartSlice = createSlice({
     },
     dncrement : (state,action) => {
        const productID =  action.payload
-       state.cartList.forEach(item =>{
+       state.cartList.forEach(item => {
         if(item?.id === productID){
             item.count++
         }
@@ -26,7 +26,7 @@ const cartSlice = createSlice({
     },
     increment : (state,action) => {
         const productID =  action.payload
-       state.cartList.forEach(item =>{
+       state.cartList.forEach(item => {
         if(item?.id === productID){
             item.count--    
         }
