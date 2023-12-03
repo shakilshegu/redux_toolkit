@@ -1,10 +1,9 @@
 import React from 'react'
 import "./CartButtons.css"
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { dncrement, increment } from '../../redux/cart'
 
-const AfterCart = () => {
-  const {cartCount} = useSelector((state)=> state.cart)
+const AfterCart = ({cartCount}) => {
   const disptach = useDispatch()
   return (
   < div className='after-cart'>

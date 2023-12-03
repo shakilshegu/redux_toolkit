@@ -8,15 +8,14 @@ import CardButton from './CartButtons'
 
 
 const ProductList = () => {
-  const { cartCount,cartList} = useSelector((state) => state.cart);
-  console.log(cartList);
+  const {cartList} = useSelector((state) => state.cart);
   return (
    <section className='container'>
      {products?.map((product,key)=>(
       <div className='product-container' key={key}>
            <img src={product?.image} alt=''></img>
           <h3>{product?.title}</h3>
-          <CardButton/>
+          <CardButton product={product}/>
       </div>
      ))}
    </section>
